@@ -89,14 +89,22 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  return numero === 10 || numero === 5; 
+  if (numero === 10 || numero === 5) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  return numero < 50 && numero > 20; 
+  if (numero < 50 && numero > 20) {
+    return true; 
+  }
+
+  return false   
 }
 
 function esEntero(numero) {
@@ -107,7 +115,12 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  return numero === Math.floor(numero)
+  if (numero === Math.floor(numero)){
+    return true
+  }
+
+  return false 
+  
 }
 
 function fizzBuzz(numero) {
@@ -115,7 +128,7 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if (numero % 15 === 0) return "fizzbuzz";
+  if (numero % 3 === 0 && numero % 5 === 0) return "fizzbuzz";
   if (numero % 3=== 0) return "fizz";
   if (numero % 5 === 0) return "buzz";
   return numero;
@@ -176,7 +189,7 @@ function tablaDelSeis(){
    //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
    //Escribe tu código aquí   
-   let arrayTablaDel6 = []
+   var arrayTablaDel6 = []
   for (let i = 0; i < 11; i++) {
         arrayTablaDel6.push(6 * i)
   }
@@ -188,9 +201,9 @@ function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   if (numero > 99 && numero < 1000) {
-    return true
+    return true;
   } 
-    return false 
+    return false; 
 }
 
 function doWhile(numero) {
